@@ -13,12 +13,19 @@ const int SIZE = 20;
 int binarySearchRecursive(const vector<int>& arr, int left, int right, int target) {
 
 
-    cout << left << , right << endl;
+    cout << left << "," << right << endl;
 
+    // If value is not found, the algorithm will continue until the left is
+    // greater than the right, and this is the backup condition to 
+    // make the recursive calls stop. 
+    // While finding the target value is the base conditions, if the value 
+    // exists
     if (left > right)
     {
         return -1;
     }
+    
+    // why not using mid = (left + right ) / 2 ?? 
     
    int mid = left + (right - left) / 2;
 
